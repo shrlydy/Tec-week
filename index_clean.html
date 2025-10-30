@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHO - Visualizando los Asentamientos Populares</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TECHO</div>
+            <h1>Visualizando los Asentamientos Populares</h1>
+            <div class="subtitle">Tecnología y datos para la vivienda digna</div>
+        </header>
+
+        <div class="content-section">
+            <p class="description">
+                Un asentamiento popular es una comunidad de personas que establecen viviendas en terrenos sin la debida autorización urbana, lo que resulta en la falta de acceso a servicios básicos como agua, electricidad y drenaje. Estos asentamientos se caracterizan por la informalidad de la ocupación, lo que genera incertidumbre jurídica sobre la propiedad de las viviendas y dificulta la dotación de infraestructura, aunque sus residentes a menudo se organizan para mejorar sus condiciones.
+            </p>
+
+            <div class="highlight">
+                <p><strong>Nuestro Proyecto:</strong> Utilizamos la tecnología y la visualización de datos para mostrar las condiciones de los asentamientos populares en México. A través de una aplicación interactiva, las personas pueden explorar mapas y gráficos sobre acceso a agua, energía, vivienda y educación, visibilizando la desigualdad territorial y apoyando la defensa del territorio.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">50,000+</span>
+                    <span class="stat-label">Familias Beneficiadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">19</span>
+                    <span class="stat-label">Países</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section testimonials">
+            <h2>Historias que Transforman</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="person-icon">👨</div>
+                    <div class="person-name">Francisco</div>
+                    <div class="testimonial-text">
+                        "Gracias a TECHO, mi familia ahora tiene una casa digna. Mis hijos pueden estudiar tranquilos y tenemos un lugar seguro donde vivir. Es el inicio de una nueva vida para nosotros."
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="person-icon">👨</div>
+                    <div class="person-name">Javier</div>
+                    <div class="testimonial-text">
+                        "La construcción de nuestra vivienda fue una experiencia increíble. Los voluntarios trabajaron junto a nosotros, y ahora tenemos no solo una casa, sino una comunidad más unida."
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="person-icon">👩</div>
+                    <div class="person-name">Imelda</div>
+                    <div class="testimonial-text">
+                        "TECHO nos dio más que una casa, nos dio esperanza. Ahora mis hijas tienen un espacio propio para hacer sus tareas y sueñan con un futuro mejor."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section map-section">
+            <div class="map-container">
+                <h2>Mapa de Asentamientos Populares</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    Visualiza los asentamientos populares identificados en Guadalajara y conoce sus condiciones actuales
+                </p>
+                
+                <div class="map-controls">
+                    <button class="btn-map" onclick="loadSettlements()">
+                        📍 Mostrar Asentamientos en Guadalajara
+                    </button>
+                </div>
+
+                <div class="loading" id="loading">
+                    🔄 Cargando datos de asentamientos...
+                </div>
+
+                <div id="map"></div>
+
+                <div class="legend" id="legend">
+                    <h4>Leyenda de Condiciones</h4>
+                    <div class="legend-item">
+                        <div class="legend-color red"></div>
+                        <span>Condiciones críticas - Requiere intervención urgente</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color orange"></div>
+                        <span>Condiciones moderadas - Necesita mejoras</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color green"></div>
+                        <span>Condiciones estables - En proceso de consolidación</span>
+                    </div>
+                </div>
+
+                <div class="settlements-list" id="settlements-list">
+                    <h3>Asentamientos Identificados</h3>
+                    <div id="settlements-data"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-text">
+                Proyecto enfocado en la defensa del territorio y el acceso equitativo a la vivienda digna
+            </div>
+            <div class="organization">TECHO México</div>
+        </footer>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
