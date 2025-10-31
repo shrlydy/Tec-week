@@ -116,8 +116,28 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px auto;
-    font-size: 2.5em;
     color: white;
+    position: relative;
+}
+
+.person-icon::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+}
+
+.person-icon::after {
+    content: '';
+    width: 36px;
+    height: 24px;
+    background: white;
+    border-radius: 18px 18px 0 0;
+    position: absolute;
+    bottom: 12px;
 }
 
 .person-name {
@@ -282,6 +302,30 @@ footer {
 .organization {
     font-weight: bold;
     color: #3498db;
+}
+
+.footer-link {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-link a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border: 2px solid #3498db;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.footer-link a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
 @media (max-width: 768px) {

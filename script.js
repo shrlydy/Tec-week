@@ -31,25 +31,25 @@ const settlementsAPI = {
             }
         },
         {
-            name: "Valle de los Cactus",
+            name: "Mesa de los Ocotes",
             lat: 20.7045,
             lng: -103.3234,
-            families: 67,
-            condition: "stable",
-            description: "Asentamiento consolidado con organización comunitaria activa",
+            families: 89,
+            condition: "moderate",
+            description: "Comunidad en proceso de consolidación con mejoras graduales",
             services: {
                 water: true,
                 electricity: true,
-                drainage: true
+                drainage: false
             }
         },
         {
-            name: "Cerro del Cuatro",
+            name: "5 de Noviembre",
             lat: 20.6789,
             lng: -103.3867,
-            families: 203,
+            families: 134,
             condition: "critical",
-            description: "Ubicado en pendiente pronunciada, viviendas precarias",
+            description: "Asentamiento reciente con necesidades urgentes de infraestructura",
             services: {
                 water: false,
                 electricity: true,
@@ -57,12 +57,12 @@ const settlementsAPI = {
             }
         },
         {
-            name: "La Esperanza",
+            name: "Sergio Barrios",
             lat: 20.6456,
             lng: -103.3123,
-            families: 112,
+            families: 97,
             condition: "moderate",
-            description: "En proceso de mejoramiento con apoyo de TECHO",
+            description: "Comunidad con organización social activa trabajando en mejoras",
             services: {
                 water: true,
                 electricity: true,
@@ -70,12 +70,12 @@ const settlementsAPI = {
             }
         },
         {
-            name: "San José del Barranco",
+            name: "La Guadalupana",
             lat: 20.6823,
             lng: -103.3645,
             families: 156,
-            condition: "moderate",
-            description: "Comunidad organizada trabajando en infraestructura básica",
+            condition: "stable",
+            description: "Asentamiento consolidado con servicios básicos establecidos",
             services: {
                 water: true,
                 electricity: true,
